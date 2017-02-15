@@ -11,7 +11,7 @@ class Post(models.Model): #定義object
             default=timezone.now)
 
     def publish(self): #publish 方法
-        self.published_date = timezone.now()
+        self.create_date = timezone.now()
         self.save()
 
     def __str__(self):  #回傳網誌標題
