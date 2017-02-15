@@ -129,7 +129,7 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Parse database configuration from $DATABASE_URL
-
+"""
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
 # Enable Persistent Connections
@@ -146,3 +146,4 @@ try:
     from .local_setting import *
 except Exception as e:
     pass
+"""
