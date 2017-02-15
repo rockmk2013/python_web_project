@@ -9,15 +9,30 @@
     <link href="//fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
     -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/blog.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="header">
-        <h1 class="site-title text-center">
+        <p class="site-title text-center">
             <a href="/">Bamboo's garage</a>
-        </h1>
+        </p>
+        <p class="site-title2 ">Keep learning, learning deeply</p>
     </div>
-    <div class="container post post-detail">
+    
+    <div class="container">
+    <div class="post_list">
+        <div class="post_heading " align="right">
+           <h2>文章列表&nbsp; &nbsp;</h2>
+                    {% for post in post_list %}
+                    <h2 class="title">
+                    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp; &nbsp;</a>
+                    </h2>
+                    {% endfor %}
+        </div>
+    </div>
+
+    <div class="post-wrapper post post-detail">
+    
         <div class="post-heading">
             <h1 class="title">{{ post.title }}</h1>
             <div class="date">{{ post.created_date|date:'Y / m / d' }}</div>
@@ -28,6 +43,10 @@
         </div>
         <hr class="fancy-line">
         <img class="photo" src="{{ post.photo }}" alt="Cover photo for {{ post.title }}">
+    </div>
+    </div>
+    <div class="reserved " align="center">
+        <p  style="font-size: 16px ;color: white">© Rock Kuo. 2017. All rights reserved.</p>
     </div>
     <!--
     <script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&sensor=false"></script>

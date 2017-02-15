@@ -5,25 +5,37 @@
 <head>
     <meta charset="utf-8">
     <title>Bamboo's garage</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://github.com/rockmk2013/rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png">
+    <link rel="shortcut icon" type="image/x-icon" href="//rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png">
     <link href="//fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/bamboo.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="header">
-        <h1 class="site-title text-center">
+        <p class="site-title ">
             <a href="/">Bamboo's garage</a>
-        </h1>
+        </p>
+        <p class="site-title2 ">Keep learning, learning deeply</p>
     </div>
     <div class="container">
+		<div class="post_list">
+    	<div class="post_heading " align="right">
+           <h2>文章列表&nbsp; &nbsp;</h2>
+                    {% for post in post_list %}
+        	        <h2 class="title">
+    				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp; &nbsp;</a>
+					</h2>
+					{% endfor %}
+        </div>
+        </div>
+        
         {% for post in post_list %}
         <div class="post-wrapper">
             <div class="post">
                 <div class="post-heading">
                     <h2 class="title">
-    <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-</h2>
+    				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+					</h2>
                     <div class="date">{{ post.created_date|date:"Y / m / d" }}</div>
                 </div>
                 {% if post.photo %}
@@ -44,6 +56,9 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+    <div class="reserved " align="center">
+    	<p  style="font-size: 16px ;color: white">© Rock Kuo. 2017. All rights reserved.</p>
     </div>
 </body>
 </html>
