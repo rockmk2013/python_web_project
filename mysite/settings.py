@@ -25,7 +25,7 @@ SECRET_KEY = '3@i(4akb7+u2$a$q$gpx*7d7h)vdas5!r&k!t@^h-%$5v^h@j4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bamboosblog.herokuapp.com']
 
 
 # Application definition
