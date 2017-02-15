@@ -57,7 +57,7 @@
                 <div class="thumbnail thumbnail-default"></div>
                 {% endif %}
                 <div class="post-content read-more-block">
-                    {{ post.text }}
+                    {{ post.text|linebreaks }}
                 </div>
                 <div class="post-footer">
                     <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">

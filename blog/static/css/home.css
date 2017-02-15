@@ -168,7 +168,7 @@ hr.fancy-line, hr.fancy-line:before {
 
 .post-content {
     padding: 40px 15px 40px 15px;
-    height: 150px;
+    height: 5px;
     overflow: hidden;
     position: relative;
     background-color: #fff;
