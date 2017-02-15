@@ -25,7 +25,7 @@ SECRET_KEY = '3@i(4akb7+u2$a$q$gpx*7d7h)vdas5!r&k!t@^h-%$5v^h@j4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bamboosblog.herokuapp.com']
+ALLOWED_HOSTS = ['bamboosblog.herokuapp.com','127.0.0.1']
 
 #ALLOWED_HOSTS = ['127.0.0.1']
 

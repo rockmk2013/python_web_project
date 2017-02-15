@@ -20,15 +20,26 @@
     <div class="container">
 		<div class="post_list">
     	<div class="post_heading " align="right">
-           <h2>文章列表&nbsp; &nbsp;</h2>
+    		<div class="others">
+            <h1>文章列表&nbsp;</h1>
                     {% for post in post_list %}
         	        <h2 class="title">
-    				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp; &nbsp;</a>
+    				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp;</a>
 					</h2>
 					{% endfor %}
+			<h1>關於我&nbsp; </h1>
+					<img class="selfphoto" src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/14595660_1204322452959403_2305618692265055290_n.jpg?oh=3aed517536d8cf812aaad54c0c1b05e3&oe=5948E951" alt="">
+					<h4 class="intro">&nbsp;&nbsp;屏東人，寄居於台北，就讀政治大學資管系四年級，喜歡嘗試新事物，熱愛創作、音樂，體驗生活。</h4>
+					<h2 class="title">
+    				<a href="https://www.facebook.com/profile.php?id=100001449795039">Facebook&nbsp;</a>
+					</h2>
+					<h2 class="title">
+    				<a href="https://github.com/rockmk2013/">Github&nbsp;</a><br>
+					</h2>
+			</div>
         </div>
         </div>
-        
+
         {% for post in post_list %}
         <div class="post-wrapper">
             <div class="post">

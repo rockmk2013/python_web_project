@@ -22,12 +22,15 @@
     <div class="container">
     <div class="post_list">
         <div class="post_heading " align="right">
-           <h2>文章列表&nbsp; &nbsp;</h2>
-                    {% for post in post_list %}
+           <h2>目前閱讀&nbsp; &nbsp;</h2>
+                    
                     <h2 class="title">
                     <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp; &nbsp;</a>
                     </h2>
-                    {% endfor %}
+                    <h2 class="title">
+                    <a href="/">回首頁&nbsp; &nbsp;</a><br>
+                    </h2>
+                    
         </div>
     </div>
 
