@@ -8,11 +8,13 @@
     <!--   
     <link href="//fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
     -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://github.com/rockmk2013/rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png?raw=true">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="header">
+        <br><br>
         <p class="site-title text-center">
             <a href="/">Bamboo's garage</a>
         </p>
@@ -22,6 +24,7 @@
     <div class="container">
     <div class="post_list">
         <div class="post_heading " align="right">
+            <div class="others">
            <h2>目前閱讀&nbsp; &nbsp;</h2>
                     
                     <h2 class="title">
@@ -30,14 +33,25 @@
                     <h2 class="title">
                     <a href="/">回首頁&nbsp; &nbsp;</a><br>
                     </h2>
-                    
+            <h1>關於我&nbsp; </h1>
+                    <img class="selfphoto" src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/14595660_1204322452959403_2305618692265055290_n.jpg?oh=3aed517536d8cf812aaad54c0c1b05e3&oe=5948E951" alt="">
+                    <h4 class="intro" align="left">屏東人，寄居台北，就讀政治大學資管系四年級，樂團主唱，喜歡嘗試新事物，熱愛創作、音樂，體驗生活，希望能為這世界做點什麼。</h4>
+                    <h2 class="title">
+                    <a href="https://www.facebook.com/profile.php?id=100001449795039">Facebook&nbsp;</a>
+                    </h2>
+                    <h2 class="title">
+                    <a href="https://github.com/rockmk2013/">Github&nbsp;</a><br>
+                    </h2>
+               </div>     
         </div>
     </div>
 
     <div class="post-wrapper post post-detail">
     
         <div class="post-heading">
-            <h1 class="title">{{ post.title }}</h1>
+            <h1 class="title">{{ post.title }}
+            <hr class="fancy-line">     
+            </h1>
             <div class="date">{{ post.created_date|date:'Y / m / d' }}</div>
         </div>
         

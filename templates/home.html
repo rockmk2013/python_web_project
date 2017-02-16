@@ -5,13 +5,14 @@
 <head>
     <meta charset="utf-8">
     <title>Bamboo's garage</title>
-    <link rel="shortcut icon" type="image/x-icon" href="//rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://github.com/rockmk2013/rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png?raw=true">
     <link href="//fonts.googleapis.com/css?family=Lemon" rel="stylesheet" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="header">
+        <br><br>
         <p class="site-title ">
             <a href="/">Bamboo's garage</a>
         </p>
@@ -21,7 +22,7 @@
 		<div class="post_list">
     	<div class="post_heading " align="right">
     		<div class="others">
-            <h1>文章列表&nbsp;</h1>
+            <h1>車庫日誌&nbsp;</h1>
                     {% for post in post_list %}
         	        <h2 class="title">
     				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp;</a>
@@ -29,7 +30,7 @@
 					{% endfor %}
 			<h1>關於我&nbsp; </h1>
 					<img class="selfphoto" src="https://scontent.ftpe4-2.fna.fbcdn.net/v/t1.0-9/14595660_1204322452959403_2305618692265055290_n.jpg?oh=3aed517536d8cf812aaad54c0c1b05e3&oe=5948E951" alt="">
-					<h4 class="intro">&nbsp;&nbsp;屏東人，寄居於台北，就讀政治大學資管系四年級，喜歡嘗試新事物，熱愛創作、音樂，體驗生活。</h4>
+					<h4 class="intro" align="left">屏東人，寄居台北，就讀政治大學資管系四年級，樂團主唱，喜歡嘗試新事物，熱愛創作、音樂，體驗生活，希望能為這世界做點什麼。</h4>
 					<h2 class="title">
     				<a href="https://www.facebook.com/profile.php?id=100001449795039">Facebook&nbsp;</a>
 					</h2>
@@ -46,9 +47,11 @@
                 <div class="post-heading">
                     <h2 class="title">
     				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                    <hr class="fancy-line">     
 					</h2>
-                    <div class="date">{{ post.created_date|date:"Y / m / d" }}</div>
-                </div>
+                    <div class="date">{{ post.created_date|date:"Y / m / d" }}
+                    </div>
+                </div>           
                 {% if post.photo %}
                 <div class="thumbnail">
                     <img src="{{ post.photo }}" alt="">
