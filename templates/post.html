@@ -10,7 +10,9 @@
     -->
     <link rel="shortcut icon" type="image/x-icon" href="https://github.com/rockmk2013/rockmk2013.github.io/blob/master/14612434_10153852586871402_8180414832633532564_o.png?raw=true">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/Home.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'css/bamboo.js' %}"></script>
 </head>
 <body>
     <div class="header">
@@ -62,6 +64,9 @@
         <img class="photo" src="{{ post.photo }}" alt="Cover photo for {{ post.title }}">
     </div>
     </div>
+    <div class="gotop" style="color: #FF6A6A;">
+    <i class="fa fa-arrow-circle-up" ></i>
+   </div>
     <div class="reserved " align="center">
         <p  style="font-size: 16px ;color: white">© Rock Kuo. 2017. All rights reserved.</p>
     </div>
