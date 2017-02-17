@@ -185,6 +185,9 @@ hr.fancy-line, hr.fancy-line:before {
 .post-content {
     padding: 40px 15px 40px 15px;
     height: 5px;
+    line-height: 30px;
+    font-family:微軟正黑體;
+    font-size: 17px;
     overflow: hidden;
     position: relative;
     background-color: #fff;

@@ -25,7 +25,7 @@
     	<div class="post_heading " align="right">
     		<div class="others">
             <h1>車庫日誌&nbsp;</h1>
-                    {% for post in post_list %}
+                    {% for post in post_list reversed%}
         	        <h2 class="title">
     				<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}&nbsp;</a>
 					</h2>
@@ -43,7 +43,7 @@
         </div>
         </div>
 
-        {% for post in post_list %}
+        {% for post in post_list reversed %}
         <div class="post-wrapper">
             <div class="post">
                 <div class="post-heading">
