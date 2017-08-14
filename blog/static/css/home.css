@@ -33,6 +33,7 @@ body {
     height:1000px;
 }
 .selfphoto{
+    background-image: url("14595660_1204322452959403_2305618692265055290_n.jpg");
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -310,8 +311,6 @@ body {
     height:1000px;
 }
 .selfphoto{
-    width: 200px;
-    height: 200px;
     border-radius: 10px;
 }
 .intro{
